@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+#header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/card.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 4%;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    /*will give space between the content and logo*/
+    flex-wrap: wrap;
+}
+
+.logo{
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.logo img{
+    height: 100px;
+    width: 150px;
+}
+
+#navbar ul li{
+    display: inline-block;
+    /* this will allign all the li items row-wise */
+    list-style-type: none;
+    margin: 10px 22px;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+}
+
+#navbar ul li a::after{
+    content: '';
+    /* width: 100%; */
+    width: 0;
+    height: 3px;
+    background: crimson;
+    bottom: -6px;
+    left: 0; /*will keep the line below the text and not misaligned*/
+    position: absolute;
+    transition: 0.3s;
+    /* z-index: -1; */ /*--> this will send the red lines on the back of background*/
+}
+
+/* the after effect will add the red lines on bottom */
+
+#navbar ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 20px;
+}
+
+.header-text p{
+    font-family: 'Bree Serif', serif;
+}
+
+.header-text h1{
+    margin-top: 20px;
+    font-size: 50px;
+    font-family:'Baloo Bhai 2', cursive;
+}
+
+.header-text h1 span{
+    color: crimson;
+    font-family:'Baloo Bhai 2', cursive;
+}
+
+
+/* -------ABOUT-------------- */
+#about{
+    padding: 80px 0px;
+    color: white;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col1{
+    flex-basis: 35%;
+    /* sets the initial main size of flex item */
+
+    /* can also do the same task with the below two lines */
+    /* left: 10%;
+    position: relative; */
+
+}
+
+#coloring{
+    color: red;
+}
+
+
+.col2{
+    flex-basis: 60%;
+}
+
+.col2 h1{
+    color: red;
+    font-size: 55px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.col1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* .tab-links{
+    display: inline;
+    
+} */
+/* this way the paragraph tags will come in a line */
+
+
+.tab-titles{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-family: 'Rowdies', cursive;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: crimson;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transition: 0.5s;
+
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+/* .tab-links:hover::after{
+    width: 60%;
+} */
+
+.tab-contents ul li{
+    margin: 10px 0;
+    list-style: none;
+}
+
+.tab-contents ul li span{
+    font-size: 14px;
+    color: crimson;
+}
+
+.tab-contents{
+    display: none;
+    /* this will hide all the tab contents */
+}
+
+.tab-contents.active-tab{
+    display: block;
+    /* now the skill contents can be seen */
+}
+
+/* -------SERVICES------------ */
+
+.container h1{
+    color: white;
+    font-size: 55px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#services{
+    padding: 30px 0;
+}
+
+.services-list{
+    display: grid;
+    /* items will display one below the other */
+}
+
+

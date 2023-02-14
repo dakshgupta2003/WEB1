@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Bree+Serif&family=Lobster&family=Rowdies&family=Secular+One&display=swap" rel="stylesheet">
+    <script href="script.js"></script>
+</head>
+<body>
+
+    <!-- ---------------ABOUT------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="images/solt.jpg" alt="ERROR">
+                </div>
+                <div class="col2">
+                    <h1 id="coloring">SOLITAIRE</h1>
+                    <p>Solitaire is any tabletop game which one can play by one self, usually with cards, but also with dominoes. The term "solitaire" is also used for single-player games of concentration and skill using a set layout tiles, pegs or stones. These games include peg solitaire and mahjong solitaire. The game is most often played by one person, but can incorporate others.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('variants')">Variants</p>
+                            <p class="tab-links" onclick="opentab('age')">Age</p>
+                        </div>
+
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><br>It is a game of combination of luck and skills</li>
+                               
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="variants">
+                            <ul>
+                                <li><br>There are many different variants of classic solitare,like spider,gameplay,pyramid,etc..</li>
+                               
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="age">
+                            <ul>
+                                <li><br>It is a great game for people of all ages if played only for time pass</li>
+                               
+                            </ul>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    
+
+    
+
+    
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tl of tablinks){
+                tl.classList.remove("active-link")
+            }
+
+            for(tl of tabcontents){
+                tl.classList.remove("active-tab")
+            }
+
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+
+        }
+    </script>
+    
+</body>
+</html>
